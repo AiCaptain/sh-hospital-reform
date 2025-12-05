@@ -90,7 +90,7 @@ def render_header():
     """Render the dashboard header"""
     col1, col2, col3 = st.columns([1, 3, 1])
     with col1:
-        st.image("https://via.placeholder.com/150x50?text=SH+Logo", width=150)
+        st.image("assets/sh_logo_wide.png", width=200)
     with col2:
         st.title("🏥 Krankenhausreform Schleswig-Holstein Dashboard")
     with col3:
@@ -243,18 +243,23 @@ def view_overview():
         alerts = get_critical_alerts()
 
         for alert in alerts:
-            alert_class = "alert-critical" if alert["priority"] == "critical" else "alert-warning"
             priority_icon = "🔴" if alert["priority"] == "critical" else "🟡"
 
-            alert_html = f"""
-            <div class="alert-box {alert_class}">
-                <div style="font-weight: bold;">{priority_icon} {alert['region']}</div>
-                <div style="margin: 5px 0;">{alert['issue']}</div>
-                {f"<div style='font-size: 0.9em; color: #666;'>Krankenhaus: {alert['hospital']}</div>" if alert['hospital'] else ""}
-                <div style="font-size: 0.9em; color: #666;">Frist: {alert['deadline']}</div>
-            </div>
-            """
-            st.markdown(alert_html, unsafe_allow_html=True)
+            # Use Streamlit containers instead of raw HTML
+            if alert["priority"] == "critical":
+                with st.container():
+                    st.error(f"{priority_icon} **{alert['region']}**")
+                    st.write(alert['issue'])
+                    if alert['hospital']:
+                        st.caption(f"Krankenhaus: {alert['hospital']}")
+                    st.caption(f"Frist: {alert['deadline']}")
+            else:
+                with st.container():
+                    st.warning(f"{priority_icon} **{alert['region']}**")
+                    st.write(alert['issue'])
+                    if alert['hospital']:
+                        st.caption(f"Krankenhaus: {alert['hospital']}")
+                    st.caption(f"Frist: {alert['deadline']}")
 
     st.divider()
 
