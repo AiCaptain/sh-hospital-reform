@@ -621,6 +621,24 @@ def view_planning():
     st.caption("**Datenquellen:** Ministerium, Landesverband der Krankenkassen, MDK, Routinedaten")
 
 
+def view_info():
+    """Render the Info view with background information"""
+    st.header("ℹ️ Fachlicher Hintergrund")
+
+    # Read and display the markdown file
+    try:
+        with open("kh-reform-fachlicher-hintergrund.md", "r", encoding="utf-8") as f:
+            markdown_content = f.read()
+
+        # Display the markdown content
+        st.markdown(markdown_content, unsafe_allow_html=True)
+
+    except FileNotFoundError:
+        st.error("Die Datei 'kh-reform-fachlicher-hintergrund.md' wurde nicht gefunden.")
+    except Exception as e:
+        st.error(f"Fehler beim Laden der Datei: {str(e)}")
+
+
 def main():
     """Main application"""
     # Render header
@@ -645,7 +663,8 @@ def main():
 
     st.sidebar.divider()
     st.sidebar.write("### ℹ️ Info")
-    st.sidebar.info("Dieses Dashboard zeigt den aktuellen Stand der Krankenhausreform in Schleswig-Holstein.")
+    if st.sidebar.button("📖 Fachlicher Hintergrund", use_container_width=True):
+        page = "ℹ️ Info"
     st.sidebar.caption("**Ziel:** 01.01.2027 - Alle Leistungsgruppen zugewiesen")
 
     # Route to selected page
@@ -659,6 +678,8 @@ def main():
         view_quality()
     elif page == "🗓️ Planung":
         view_planning()
+    elif page == "ℹ️ Info":
+        view_info()
 
 
 if __name__ == "__main__":
