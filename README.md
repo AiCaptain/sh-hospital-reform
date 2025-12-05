@@ -19,6 +19,42 @@ streamlit run app.py
 
 Das Dashboard öffnet sich automatisch im Browser unter `http://localhost:8501`
 
+## ☁️ Deployment auf Streamlit Cloud
+
+### Voraussetzungen
+- GitHub Repository (bereits vorhanden)
+- Streamlit Cloud Account (kostenlos)
+
+### Deployment-Schritte
+
+1. **Gehen Sie zu Streamlit Cloud:**
+   - Besuchen Sie: https://share.streamlit.io/
+   - Klicken Sie auf "Sign up" oder "Log in" mit Ihrem GitHub Account
+
+2. **Neue App deployen:**
+   - Klicken Sie auf "New app"
+   - Wählen Sie das Repository: `AiCaptain/sh-hospital-reform`
+   - Branch: `main`
+   - Main file path: `app.py`
+   - App URL: Wählen Sie eine eindeutige URL (z.B. `sh-hospital-reform`)
+
+3. **Deployment starten:**
+   - Klicken Sie auf "Deploy!"
+   - Das Dashboard wird automatisch gebaut und deployed
+   - Nach wenigen Minuten ist Ihre App live!
+
+4. **App-URL:**
+   - Ihre App wird verfügbar sein unter: `https://[your-app-name].streamlit.app`
+
+### Automatische Updates
+- Jeder Push zum `main` Branch löst automatisch ein Re-Deployment aus
+- Die App wird innerhalb von 1-2 Minuten aktualisiert
+
+### Optional: Secrets konfigurieren
+Falls Sie später echte Datenquellen anbinden:
+1. Gehen Sie zu App Settings → Secrets
+2. Fügen Sie Ihre Secrets im TOML-Format hinzu (siehe `.streamlit/secrets.toml.example`)
+
 ## 📊 Dashboard-Ansichten
 
 Das Dashboard bietet 5 Hauptansichten:
