@@ -1,3 +1,29 @@
+# Einleitung / Introduction
+
+## Deutsch
+
+In der aktuellen Krankenhausreform in Schleswig-Holstein geht es um eine umfassende Neugestaltung der Krankenhauslandschaft. Gesundheitsministerin Kerstin von der Decken hat Ende November 2025 den aktuellen Stand vorgestellt. Zentral ist die Planung der Leistungsgruppen, die genau festlegt, welche Krankenhäuser welche medizinischen Aufgaben übernehmen. Bis Mitte November 2025 hatten die Kliniken Anträge für insgesamt 61 Leistungsgruppen gestellt. Diese werden nun geprüft, und ab dem ersten Quartal 2026 sind Regionalkonferenzen geplant, um die Versorgung in den einzelnen Regionen zu besprechen.
+
+Ein zentrales Thema ist auch der sogenannte Krankenhaustransformationsfonds, der Reformen finanziell unterstützt. Hier setzt sich Schleswig-Holstein auf Bundesebene für flexiblere Vorgaben ein, damit Kliniken besser unterstützt werden.
+
+Die Reform sieht zudem vor, dass spezialisierte Versorgungen in bestimmten Zentren gebündelt werden, während die Grund- und Notfallversorgung weiterhin flächendeckend erhalten bleiben soll. Allerdings gibt es auch Kritik an den bundesgesetzlichen Vorgaben, da einige Länder, darunter Schleswig-Holstein, mehr Flexibilität fordern, um regionale Besonderheiten ausreichend zu berücksichtigen.
+
+Insgesamt zielt die Reform darauf ab, die Krankenhausstruktur zukunftsfähig zu machen, die Qualität zu sichern und eine bedarfsgerechte, hochwertige Versorgung für die Menschen in Schleswig-Holstein sicherzustellen.
+
+## English
+
+The current hospital reform in Schleswig-Holstein is all about a comprehensive restructuring of the hospital landscape. Minister of Health, Kerstin von der Decken, presented the latest status at the end of November 2025.
+
+A central element is the planning of service groups—clearly defining which hospitals provide which medical services. By mid-November 2025, hospitals had submitted applications for 61 service groups. These are now being reviewed, and starting in the first quarter of 2026, regional conferences will discuss healthcare provision in each region.
+
+Another key point is the hospital transformation fund, which supports reforms financially. Schleswig-Holstein is advocating for more flexible requirements at the federal level, to better support hospitals.
+
+The reform also aims to concentrate specialized care in certain centers, while ensuring that basic and emergency care remain widely available. There has been criticism of the federal regulations, as some states, including Schleswig-Holstein, are pushing for more flexibility to account for regional differences.
+
+Overall, the reform aims to make the hospital structure future-proof, ensure quality, and guarantee a needs-based, high-quality healthcare service for the people of Schleswig-Holstein.
+
+---
+
 # Erfolgskriterien und Informationsbedarf für die Krankenhausreform in Schleswig-Holstein
 
 # Success Criteria and Information Requirements for the Hospital Reform in Schleswig-Holstein
