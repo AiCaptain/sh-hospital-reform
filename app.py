@@ -545,23 +545,66 @@ def view_quality():
 
         comparison_data = get_hospital_comparison(selected_lg)
 
-        # Create heatmap-style table
+        # Create header row
+        col_a, col_b, col_c, col_d, col_e = st.columns([3, 1, 1, 1, 1])
+        with col_a:
+            st.write("**Krankenhaus**")
+        with col_b:
+            st.write("**Komplikationen**")
+        with col_c:
+            st.write("**Mortalität**")
+        with col_d:
+            st.write("**Zufriedenheit**")
+        with col_e:
+            st.write("**Verweildauer**")
+
+        st.divider()
+
+        # Create data rows with color-coded backgrounds
         for comp in comparison_data:
             col_a, col_b, col_c, col_d, col_e = st.columns([3, 1, 1, 1, 1])
 
             with col_a:
-                st.write(f"**{comp['hospital']}**")
+                st.write(comp['hospital'])
             with col_b:
-                st.write(render_status_badge(comp['complication']))
+                if comp['complication'] == 'success':
+                    st.success("✓ Gut", icon="✅")
+                elif comp['complication'] == 'warning':
+                    st.warning("⚠ OK", icon="⚠️")
+                else:
+                    st.error("✗ Kritisch", icon="🔴")
             with col_c:
-                st.write(render_status_badge(comp['mortality']))
+                if comp['mortality'] == 'success':
+                    st.success("✓ Gut", icon="✅")
+                elif comp['mortality'] == 'warning':
+                    st.warning("⚠ OK", icon="⚠️")
+                else:
+                    st.error("✗ Kritisch", icon="🔴")
             with col_d:
-                st.write(render_status_badge(comp['satisfaction']))
+                if comp['satisfaction'] == 'success':
+                    st.success("✓ Gut", icon="✅")
+                elif comp['satisfaction'] == 'warning':
+                    st.warning("⚠ OK", icon="⚠️")
+                else:
+                    st.error("✗ Kritisch", icon="🔴")
             with col_e:
-                st.write(render_status_badge(comp['stay_duration']))
+                if comp['stay_duration'] == 'success':
+                    st.success("✓ Gut", icon="✅")
+                elif comp['stay_duration'] == 'warning':
+                    st.warning("⚠ OK", icon="⚠️")
+                else:
+                    st.error("✗ Kritisch", icon="🔴")
+
+        st.divider()
 
         # Legend
-        st.caption("Legende: 🟢 Über Ziel | 🟡 Im Plan | 🔴 Unter Ziel")
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.success("✓ Gut: Zielwert übertroffen", icon="✅")
+        with col2:
+            st.warning("⚠ OK: Im Zielbereich", icon="⚠️")
+        with col3:
+            st.error("✗ Kritisch: Unter Zielwert", icon="🔴")
 
 
 def view_planning():
